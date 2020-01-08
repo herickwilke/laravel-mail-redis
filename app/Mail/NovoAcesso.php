@@ -23,6 +23,6 @@ class NovoAcesso extends Mailable
             'nome' => $this->user->name,
             'email' => $this->user->email,
             'datahora' => now()->setTimeZone('America/Sao_Paulo')->format('d-m-Y H:i:s')
-        ]);
+        ])->attach(base_path() . '/arquivos/Plano de Ensino.pdf');
     }
 }
