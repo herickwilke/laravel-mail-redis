@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        event(new HomeEvent("Olá mundo"));
+        // event(new HomeEvent("Olá mundo"));
         return view('home');
     }
 }
