@@ -20,7 +20,9 @@ class NovoAcesso extends Mailable
     public function build()
     {
         return $this->view('emails.novoacesso')->with([
-            'nome' => $this->user->name
+            'nome' => $this->user->name,
+            'email' => $this->user->email,
+            'datahora' => now()->setTimeZone('America/Sao_Paulo')->format('d-m-Y H:i:s')
         ]);
     }
 }
